@@ -16,5 +16,7 @@ jobs:
 
     - name: Build
       run: |
-        npm install
-        gulp
+        yarn
+        yarn lint
+        yarn test --watch=false --browsers=ChromeHeadless
+        yarn build --prod
